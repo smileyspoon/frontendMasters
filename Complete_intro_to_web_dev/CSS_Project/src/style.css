@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+    font-family: 'Open Sans', sans-serif;
+}
+.my-page {
+    display: grid;
+
+
+    grid-template-areas: 
+
+    "area-header area-header area-header area-header"
+    "area-display-main area-display-main area-user-input area-user-input"
+    "area-display-total area-display-total area-display-total area-display-total"
+    "area-order area-order area-order area-order"
+    ;
+
+}
+
+
+
+.my-page-header {
+    /* overwrite to flex  */
+    display: flex;
+    grid-area: area-header;
+    background-color: #43281c;
+    /* both below used to center the image and text */
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.header-image {
+    /* size of the image, only need to change the width and height follows */
+    width: 25px;  
+    /* make the position relative so i can use top */
+    position: relative;
+    /* use top to nudge it down 4 px */
+    top: 4px;
+
+}
+
+.heder-text {
+    color: #fbf2c0;
+    font-size: 16px;
+    font-size: 1.5em;
+    /* This one seems give more space to top and bottom for the text? */
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    /* didn't seem to make a difference whether inline or block */
+    display: block;
+
+    
+
+}
+
+.edge {
+ 
+    box-shadow: 3px -1px 5px  rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.container-color {
+    background-color: #eee1d5;
+
+}
+
+
+
+.my-page-display-main {
+    grid-area: area-display-main;
+
+
+
+}
+
+.my-page-user-input {
+    display: grid;
+    grid-area: area-user-input;
+
+    grid-template-areas: 
+    "custName"
+    "payment"
+    "payment";
+    grid-template-columns: 1fr;
+
+}
+
+.my-page-display-total {
+    grid-area: area-display-total;
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.my-page-order {
+    grid-area: area-order;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #43281c;
+    color: white;
+    border-radius: 100px;
+    padding: 5px;
+    margin: 15px;
+
+}
+
+.display-name {
+    font-size: 20px;
+    padding-left: 15PX;
+    padding-top: 15px;
+    color: #885a2d;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    
+
+
+}
+
+
+li {
+    display: grid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    grid-template-areas: 
+
+    ". extra extra extra extra";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+
+    ;
+}
+
+li:first-child {
+
+    display: grid;
+    
+    grid-template-areas: 
+
+    "amount item-name item-name item-name cost";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+
+
+
+.display-item {
+    
+    
+
+}
+
+.display-item:first-child {
+    color: black;
+    font-weight: bold;
+    
+
+}
+
+.display-item:last-child {
+    border-bottom: solid #deb993;
+    border-width: 1px;
+    padding-bottom: 15px;
+
+}
+
+.display-item-amount {
+    grid-area: amount;
+
+}
+
+.display-item-name {
+    grid-area: item-name;
+
+}
+
+.display-item-cost {
+    grid-area: cost;
+
+}
+
+.display-item-extra {
+    color: #B08968;
+    grid-area: extra;
+
+}
+
+
+.display-input-name{
+    grid-area: custName;
+
+}
+
+
+.display-input-payment{
+    grid-area: payment;
+
+}
+
+.display-input-item-container {
+    /* The parent needs to be relative so child can use absolute position */
+    position: relative; /* see display-item-input-name which is the child*/
+    padding: 15px;
+}
+
+.display-item-input-name {
+
+    /* child can use absolute because parent is using relative */
+    position: absolute; /* see display-input-item-container which is the parent*/
+    left: 40px;
+    top: 6px;
+    color: #885a2d;
+    font-size: 10px;
+    background-color: #eee1d5;
+
+
+
+
+}
+
+.display-item-input {
+    /* makes it so there is no color not just white */
+    background-color: rgba(0,0,0,0);
+    border: 2px solid #885a2d;
+    border-radius: 100px;
+    font-size: 18px;
+    padding: 8px;
+    width: 100%;
+
+
+}
+
+
+.payment-table{
+    width: 100%;
+    max-width: 500px;
+    font-size: 20px;
+
+
+}
+
+.payment-table-total {
+    font-weight: bold;
+
+}
+
+
+

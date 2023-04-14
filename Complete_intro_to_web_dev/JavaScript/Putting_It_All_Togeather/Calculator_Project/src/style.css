@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+
+}
+
+
+.calculator {
+    display: grid;
+
+    justify-content: center;
+
+
+
+    grid-template-areas: 
+    /* 1 */ "grid-display grid-display" 
+    /* 2 */ "grid-erase grid-operator"
+    /* 3 */ "grid-digit grid-operator"
+
+    ;
+
+    grid-template-columns: 300px 100px;
+    
+    column-gap: 0px;
+    row-gap: 0px;
+
+}
+
+
+button {
+    width: 100px;
+    height: 100px;
+    border: solid 2px black;
+    background-color: rgba(220, 220, 220,1);
+
+}
+
+button:hover {
+    
+    background-color: rgba(220, 220, 220,0.1);
+    
+    transition: background-color 0.5s ease;
+
+
+}
+
+button:active {
+    animation: flash 0.2s;
+
+}
+
+@keyframes flash {
+
+    50% { background-color: rgba(74, 63, 236, 0.355); }
+
+  }
+
+
+.operator__button:hover{
+    
+    background-color: rgba(255, 68, 0,0.7);
+    
+    transition: background-color 0.5s ease;
+
+
+}
+
+.button__zero {
+    width:inherit;
+
+}
+
+.text-size {
+    font-size: 50px;
+}
+
+
+
+/* display section */
+.display {
+    grid-area: grid-display;
+    display: flex;
+    justify-content: right;
+    white-space: nowrap;
+    background-color: black;
+    color: white;
+    height: 100px;
+    /* align-items: center; */
+    font-size: 50px;
+    padding-right: 10px;
+}
+
+
+/* erase section */
+.erase{
+    grid-area: grid-erase;
+    display: flex;
+
+
+}
+
+.erase__clear{
+    flex-basis: 66.66%;
+
+}
+
+.erase__backspace{
+    flex-basis: 33.34%;
+
+}
+
+/* digit section */
+.digit {
+    grid-area: grid-digit;
+
+
+    display: grid;
+    /* justify-content: start;
+    justify-items: stretch ; */
+    grid-auto-flow: row;
+
+
+     grid-template-columns: repeat(3, 1fr);
+
+
+}
+
+
+
+
+.digit__number {
+
+} 
+
+.digit__number:last-child {
+    display: grid;
+    grid-column-end: span 3;
+    align-items: center;
+
+
+} 
+
+
+/* operator section */
+.operator{
+    grid-area: grid-operator;
+
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.operator__color {
+    color: white;
+    background-color: rgba(255, 68, 0,1);
+
+}

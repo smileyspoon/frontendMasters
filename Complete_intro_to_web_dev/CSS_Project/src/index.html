@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link  href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class = "my-page"> 
+        <header class="my-page-header">
+            <h1 class="heder-text">
+            <img class="header-image" src="./coffee_masters_logo.png" alt="">
+            Coffee Masters
+            </h1>
+        </header>
+
+
+        <!-- Display -->
+        <div class="my-page-display-main edge container-color">
+            <div class="display-name">
+                ITEM
+            </div>
+
+            <!-- 1st-->
+
+            <div>
+                <ul>
+                    <li class="display-item">
+                        <span class="display-item-amount">1x</span>
+                        <span class="display-item-name">Cappucino</span>
+                        <span class="display-item-cost">$6.00</span>
+                    </li>
+                    <li class="display-item">
+                        <span class="display-item-extra">Light Foam</span> 
+                    </li>   
+                </ul>
+                    
+            </div>
+
+            <!-- 2nd -->
+            
+            <div>
+                <ul>
+                    <li class="display-item">
+                        <span class="display-item-amount">1x</span>
+                        <span class="display-item-name">Cappucino</span>
+                        <span class="display-item-cost">$7.90</span>
+                    </li>
+                    <li class="display-item">
+                        <span class="display-item-extra">Almound Milk</span> 
+                    </li>        
+                    
+                    <li class="display-item">
+                        <span class="display-item-extra">Double Espresso Shot</span> 
+                    </li>                        
+
+
+                </ul>
+
+            </div>
+
+            <!-- 3rd -->
+
+            <div>
+
+                <ul>
+                    <li class="display-item">
+                        <span class="display-item-amount">1x</span>
+                        <span class="display-item-name">Cappucino</span>
+                        <span class="display-item-cost">$5.37</span>
+                    </li>
+                    <li class="display-item">
+                        <span class="display-item-extra">Butter</span> 
+                    </li>   
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- User Input -->
+        <div class="my-page-user-input ">
+            <div class="display-input-name container-color edge">
+                <div class="display-name">
+                    Name
+                </div>
+                <div class="display-input-item-container">
+                    <label for="name" class="display-item-input-name">Name of Order</label>
+                    <Input id="name" type="text" class="display-item-input"></Input>
+                </div>
+
+            </div>
+
+
+            <div class="display-input-payment container-color edge">
+                <div class="display-name">
+                    Payment
+                </div>
+
+                <div class="display-input-item-container">
+                    <label for="name" class="display-item-input-name">Card Number</label>
+                    <Input id="name" type="text" class="display-item-input"></Input>
+                </div>
+
+                <div class="display-input-item-container">
+                    <label for="name" class="display-item-input-name">CCV Number</label>
+                    <Input id="name" type="text" class="display-item-input"></Input>
+                </div>
+
+            </div>
+
+
+        </div>
+        
+        
+        <!-- Display Total -->
+        <div class="my-page-display-total">
+            <table class="payment-table">
+                <tbody>
+                    <tr>
+                        <td>Subtotal:</td>
+                        <td>$19.27</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tax:</td>
+                        <td>$0.96</td>
+                    </tr>
+
+                    <tr class="payment-table-total ">
+                        <td>Total:</td>
+                        <td>$20.23</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Order -->
+        <div class="my-page-order"><span>Place Order</span></div>
+
+    </div>
+
+</body>
+</html>

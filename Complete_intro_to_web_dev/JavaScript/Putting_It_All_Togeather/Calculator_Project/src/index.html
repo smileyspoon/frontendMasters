@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+<div class="calculator">
+
+    <!-- Display of calculation -->
+    <section class="display">0</section>
+    
+    <!-- Clear and backspace buttons -->
+    <section class="erase">
+        <button class="erase__clear text-size">C</button>
+        <!-- this is the backspace button just for fun -->
+        <button class="erase__backspace text-size">✨</button>
+
+    </section>
+    
+    <!-- 1-9 -->
+    <section class="digit">
+        <button class="digit__number text-size">7</button>
+        <button class="digit__number text-size">8</button>
+        <button class="digit__number text-size">9</button>
+
+        <button class="digit__number text-size">4</button>
+        <button class="digit__number text-size">5</button>
+        <button class="digit__number text-size">6</button>
+
+        <button class="digit__number text-size">1</button>
+        <button class="digit__number text-size">2</button>
+        <button class="digit__number text-size">3</button>
+
+        <button class="digit__number button__zero text-size">0</button>
+
+    </section>
+    
+    <!-- operator -->
+    <section class="operator text-size">
+        <button class="operator__button text-size operator__color">÷</button>
+        <button class="operator__button text-size operator__color">x</button>
+        <button class="operator__button text-size operator__color">-</button>
+        <button class="operator__button text-size operator__color">+</button>
+        <button class="operator__button text-size operator__color">=</button>
+
+    </section>
+
+</div>
+    
+    
+    <script src="./calculator.js"></script>
+</body>
+</html>
